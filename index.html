@@ -16,13 +16,13 @@
                 <div class="header-subtitle">без смены собственника</div>
             </div>
             <div class="header-contact">
-                <div class="header-phone">8 (800) 111-11-11</div>
+                <div class="header-phone"><a href="tel:+89999999999">8 (800) 111-11-11</a></div>
                 <div class="header-subtitle">Звонок бесплатный</div>
             </div>
         </header>
         <main>
             <section class="main">
-                <div class="main-bg"></div>
+                <div class="main-mask"></div>
                 <img class="main-img" src="/src/img/main-bg.png" alt="bg">
                 <div class="container">
                     <div class="main-content">
@@ -46,6 +46,118 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="quiz container">
+                <div class="quiz-wrapper">
+                    <div class="quiz-title">Ответьте на 5 вопросов</div>
+                    <div class="quiz-text">и получите решение на одобрение заявки без подтверждения дохода и с любой кредитной историей</div>
+                    <form action="" class="quiz-form form">
+                        <div class="form-title">Сумма займа, рублей</div>
+                        <ul class="form-list">
+                            <li class="form-li">
+                                <input class="checkbox" checked type="radio" id="summCh1" name="summ" value="100000-500000"><label for="summCh1">100 000 - 500 000 руб.</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="summCh2" name="summ" value="500000-1000000">
+                                <label for="summCh2">500 000 - 1 000 000 руб.</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="summCh3" name="summ" value="1000000-3000000">
+                                <label for="summCh3">1 000 000 - 3 000 000 руб.</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="summCh4" name="summ" value="3000000-10000000">
+                                <label for="summCh4">3 000 000 - 10 000 000 руб.</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="summCh5" name="summ" value="10000000-30000000">
+                                <label for="summCh5">10 000 000 - 30 000 000 руб.</label>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="" class="quiz-form form">
+                        <div class="form-title">Срок займа, месяцев</div>
+                        <ul class="form-list">
+                            <li class="form-li">
+                                <input class="checkbox" checked type="radio" id="periodCh1" name="period" value="6-12"><label for="periodCh1">От 6 до 12 месяцев</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="periodCh2" name="period" value="12-24"><label for="periodCh2">От 12 до 24 месяцев</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="periodCh3" name="period" value="24-48"><label for="periodCh3">От 24 до 48 месяцев</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="periodCh4" name="period" value="48-60"><label for="periodCh4">От 48 до 60 месяцев</label>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="" class="quiz-form form">
+                        <div class="form-title">Вид займа</div>
+                        <ul class="form-list">
+                            <li class="form-li">
+                                <input class="checkbox" checked type="radio" id="typeCh1" name="type" value="bank"><label for="typeCh1">Займ в банке</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="typeCh2" name="type" value="investor"><label for="typeCh2">Займ у частного инвестора</label>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="" class="quiz-form form">
+                        <div class="form-title">Объект залога</div>
+                        <ul class="form-list">
+                            <li class="form-li">
+                                <input class="checkbox" checked type="radio" id="objectCh1" name="object" value="house"><label for="objectCh1">Дом</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="objectCh2" name="object" value="flat"><label for="objectCh2">Квартира</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="objectCh3" name="object" value="room"><label for="objectCh3">Комната</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="objectCh4" name="object" value="commertial"><label for="objectCh4">Коммерция</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="objectCh5" name="object" value="land"><label for="objectCh5">Земельный участок</label>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="" class="quiz-form form">
+                        <div class="form-title">Куда отправить решение о займе?</div>
+                        <ul class="form-list">
+                            <li class="form-li">
+                                <input class="checkbox" checked type="radio" id="contactCh1" name="contact" value="phone"><label for="contactCh1">Телефон</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="contactCh2" name="contact" value="whatsup"><label for="contactCh2">WhatsApp</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="contactCh3" name="contact" value="viber"><label for="contactCh3">Viber</label>
+                            </li>
+                            <li class="form-li">
+                                <input class="checkbox" type="radio" id="contactCh4" name="contact" value="telegram"><label for="contactCh4">Telegram</label>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="" class="quiz-form form">
+                        <div class="form-title">Ваши контактные данные</div>
+                        <input class="form-input" required type="text" placeholder="Ваше имя">
+                        <input class="form-input" required type="text" placeholder="Номер телефона">
+                        <select class="form-select" required name="city" id="city">
+                            <option disabled value="1">Город</option>
+                            <option value="Omsk">Омск</option>
+                            <option value="Izengard">Изенгард</option>
+                            <option value="City17">City17</option>
+                            <option value="SailentHill">Сайлент хилл</option>
+                        </select>
+                    </form>
+                    <button class="quiz-btn">Получить одобрение</button>
+                    <div class="quiz-agree">
+                        Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно <a href="">политике конфеденциальности</a>
+                    </div>
+                </div>
+
             </section>
         </main>
         <footer class="footer"></footer>
