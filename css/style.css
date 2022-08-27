@@ -289,11 +289,14 @@ label {
 .quiz {
   padding: 70px 0 70px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
 }
 .quiz-wrapper {
   width: 540px;
+  display: flex;
+  flex-direction: column;
 }
 .quiz-title {
   font-weight: 600;
@@ -467,6 +470,7 @@ label {
 
 .partners {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -506,10 +510,15 @@ label {
 }
 
 .progressbar {
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  justify-self: right;
   top: 70px;
   right: 0;
   width: 540px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #F6F7F8;
   border-radius: 20px;
   box-sizing: border-box;
