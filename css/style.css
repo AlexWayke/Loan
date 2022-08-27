@@ -332,19 +332,41 @@ label {
   outline: none;
   border-radius: 6px;
 }
+.form-input::-moz-placeholder {
+  color: #333;
+}
+.form-input:-ms-input-placeholder {
+  color: #333;
+}
+.form-input::placeholder {
+  color: #333;
+}
 .form-input:focus {
   border-color: #FFDD2D;
 }
 .form-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: grid;
+  grid-template-areas: "select";
+  grid-area: select;
   margin-bottom: 20px;
   box-sizing: border-box;
   border: 2px #EAECEE solid;
+  outline: none;
+  border-radius: 6px;
   padding: 13px 14px;
   font-size: 1.8em;
   line-height: 22.05px;
-  outline: none;
-  border-radius: 6px;
 }
 .form-select:focus {
   border-color: #FFDD2D;
+}
+.form-select::after {
+  content: "";
+  grid-area: select;
+  width: 10px;
+  height: 10px;
+  background: no-repeat url(/src/icons/arrow.svg);
 }
