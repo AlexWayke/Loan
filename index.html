@@ -48,6 +48,16 @@
                 </div>
             </section>
             <section class="quiz container">
+                <div class="progressbar">
+                    <div class="progressbar-title">
+                        Вы прошли почти весь путь до одобрения
+                    </div>
+                    <div class="progressbar-value">94%</div>
+                    <div class="progressbar-line">
+                        <div class="progressbar-complete"></div>
+                    </div>
+                    <div class="progressbar-text">осталось совсем немного, чтобы получить деньги</div>
+                </div>
                 <div class="quiz-wrapper">
                     <div class="quiz-title">Ответьте на 5 вопросов</div>
                     <div class="quiz-text">и получите решение на одобрение заявки без подтверждения дохода и с любой кредитной историей</div>
@@ -144,23 +154,48 @@
                         <div class="form-title">Ваши контактные данные</div>
                         <input class="form-input" required type="text" placeholder="Ваше имя">
                         <input class="form-input" required type="text" placeholder="Номер телефона">
-                        <select class="form-select" required name="city" id="city">
-                            <option disabled value="1">Город</option>
-                            <option value="Omsk">Омск</option>
-                            <option value="Izengard">Изенгард</option>
-                            <option value="City17">City17</option>
-                            <option value="SailentHill">Сайлент хилл</option>
-                        </select>
+                        <div class="form-select select" data-state="">
+                            <div class="select-title">Ваш город</div>
+                            <div class="select-items">
+                                <input class="select-input" id="selectCity01" type="radio" value="Омск" name="selectName">
+                                <label class="select-label" for="selectCity01">Омск</label>
+                                <input class="select-input" id="selectCity02" type="radio" value="City 17" name="selectName">
+                                <label class="select-label" for="selectCity02">City 17</label>
+                                <input class="select-input" id="selectCity03" type="radio" value="Сайлент хилл" name="selectName">
+                                <label class="select-label" for="selectCity03">Сайлент хилл</label>
+                                <input class="select-input" id="selectCity04" type="radio" value="Изенгард" name="selectName">
+                                <label class="select-label" for="selectCity04">Изенгард</label>
+                            </div>
+                        </div>
                     </form>
                     <button class="quiz-btn">Получить одобрение</button>
                     <div class="quiz-agree">
                         Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно <a href="">политике конфеденциальности</a>
                     </div>
                 </div>
-
+                <div class="quiz-footer partners">
+                    <img src="/src/logo/logo-partners1.svg" alt="">
+                    <img src="/src/logo/logo-partners2.png" alt="">
+                    <img src="/src/logo/logo-partners3.svg" alt="">
+                    <img src="/src/logo/logo-partners4.svg" alt="">
+                    <img src="/src/logo/logo-partners5.svg" alt="">
+                </div>
             </section>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer-wrapper container">
+                <div class="footer-contact">
+                    <div class="footer-phone"><a href="tel:+89999999999">8 (800) 111-11-11</a></div>
+                    <div class="footer-text">Звонок бесплатный</div>
+                </div>
+                <div class="footer-address">
+                    <span>Услуга предоставляется КПК «Областной сберегательный союз»</span>
+                    <span>ОГРН 11111111111, ИНН 111111111111</span>
+                    <span>191023, г. Санкт-Петербург, ул. Гороховая, 28</span>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>
