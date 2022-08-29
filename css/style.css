@@ -287,7 +287,7 @@ label {
 }
 
 .quiz {
-  padding: 70px 0 70px;
+  padding: 70px 15px 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -339,6 +339,22 @@ label {
 .quiz-footer {
   width: 50%;
 }
+@media (max-width: 951px) {
+  .quiz {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 581px) {
+  .quiz-title {
+    font-size: 5.17vw;
+  }
+  .quiz-text {
+    font-size: 5.17vw;
+  }
+  .quiz-wrapper {
+    width: 100%;
+  }
+}
 
 .form-title {
   margin-bottom: 20px;
@@ -375,6 +391,24 @@ label {
 .form-input:focus {
   border-color: #FFDD2D;
 }
+.form-input:valid:not(:-moz-placeholder-shown) {
+  border: 2px solid rgb(94, 243, 198);
+}
+.form-input:valid:not(:-ms-input-placeholder) {
+  border: 2px solid rgb(94, 243, 198);
+}
+.form-input:valid:not(:placeholder-shown) {
+  border: 2px solid rgb(94, 243, 198);
+}
+.form-input:invalid:not(:-moz-placeholder-shown) {
+  border: 2px solid #aaaaaa;
+}
+.form-input:invalid:not(:-ms-input-placeholder) {
+  border: 2px solid #aaaaaa;
+}
+.form-input:invalid:not(:placeholder-shown) {
+  border: 2px solid #aaaaaa;
+}
 .form-select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -384,6 +418,32 @@ label {
   border-radius: 6px;
   font-size: 1.8em;
   line-height: 22.05px;
+}
+@media (max-width: 381px) {
+  .form-title {
+    margin-bottom: 3.45vw;
+    font-size: 5vw;
+    line-height: 5.17vw;
+  }
+  .form-list {
+    margin-bottom: 5.17vw;
+  }
+  .form-li {
+    font-size: 4vw;
+    line-height: 6.9vw;
+  }
+  .form-input {
+    margin-bottom: 3.45vw;
+    font-size: 4vw;
+    line-height: 4vw;
+    border-radius: 1vw;
+  }
+  .form-select {
+    margin-bottom: 3.45vw;
+    border-radius: 1vw;
+    font-size: 4vw;
+    line-height: 4vw;
+  }
 }
 
 .select {
@@ -446,11 +506,9 @@ label {
 .select-title {
   color: #333;
   font-weight: 500;
-  line-height: 22.05px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
   padding: 13px 14px;
   border-radius: 6px;
   cursor: pointer;
@@ -459,13 +517,22 @@ label {
 .select-title::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 18px;
   right: 20px;
   display: block;
   width: 13px;
   height: 8px;
   transition: all 0.3s ease-out;
   background: no-repeat url(/src/icons/arrow.svg);
+}
+@media (max-width: 381px) {
+  .select-items {
+    top: 43px;
+  }
+}
+
+.select-empty {
+  border: 2px #aaaaaa solid;
 }
 
 .partners {
@@ -508,52 +575,163 @@ label {
 .footer-address span {
   display: block;
 }
+@media (max-width: 711px) {
+  .footer {
+    padding: 4.2vw 0;
+    font-size: 2.1vw;
+    line-height: 2.5vw;
+  }
+  .footer-phone {
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 511px) {
+  .footer {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-address {
+    text-align: center;
+  }
+  .footer-contact {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .footer-phone {
+    font-size: 1.2em;
+  }
+}
 
 .progressbar {
   position: -webkit-sticky;
   position: sticky;
   justify-self: right;
-  top: 70px;
+  top: 3.65vw;
   right: 0;
-  width: 540px;
+  width: 28.125vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: #F6F7F8;
-  border-radius: 20px;
+  border-radius: 1vw;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 1.5vw;
   display: flex;
   flex-wrap: wrap;
 }
 .progressbar-title {
-  font-size: 2.5em;
+  font-size: 1.3vw;
   font-weight: 600;
-  line-height: 30.63px;
+  line-height: 1.5vw;
   width: 80%;
   color: #878B92;
   margin-bottom: 10px;
 }
 .progressbar-value {
-  font-size: 2.5em;
+  font-size: 1.3vw;
   font-weight: 700;
   line-height: 30.63px;
   margin-left: auto;
 }
 .progressbar-line {
   width: 100%;
-  height: 12px;
+  height: 0.625vw;
   background-color: #EAECEE;
-  border-radius: 8px;
-  margin-bottom: 7px;
+  border-radius: 0.4vw;
+  margin-bottom: 0.36vw;
 }
 .progressbar-complete {
   height: 100%;
   width: 94%;
-  border-radius: 8px;
+  border-radius: 0.4vw;
   background-color: #FFDD2D;
 }
 .progressbar-text {
-  font-size: 1.8em;
-  line-height: 22.05px;
+  font-size: 0.9vw;
+  line-height: 1.15vw;
+}
+@media (max-width: 1250px) {
+  .progressbar {
+    width: 350px;
+    border-radius: 12px;
+    padding: 1.8em;
+  }
+  .progressbar-title {
+    font-size: 1.6em;
+    line-height: 1.6em;
+  }
+  .progressbar-value {
+    font-size: 1.6em;
+  }
+  .progressbar-line {
+    height: 8px;
+    border-radius: 5px;
+    margin-bottom: 0.36vw;
+  }
+  .progressbar-complete {
+    border-radius: 5px;
+  }
+  .progressbar-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 951px) {
+  .progressbar {
+    margin: 0 0 30px auto;
+    width: 534px;
+    border-radius: 20px;
+    padding: 3em;
+  }
+  .progressbar-title {
+    font-size: 2.5em;
+    line-height: 32px;
+  }
+  .progressbar-value {
+    font-size: 2.5em;
+  }
+  .progressbar-line {
+    height: 12px;
+    border-radius: 8px;
+    margin-bottom: 7px;
+  }
+  .progressbar-complete {
+    border-radius: 8px;
+  }
+  .progressbar-text {
+    font-size: 1.8em;
+    line-height: 2.2em;
+  }
+}
+@media (max-width: 581px) {
+  .progressbar {
+    width: 100%;
+    margin: 0 0 5.17vw auto;
+    border-radius: 3.45vw;
+    padding: 5.17vw;
+  }
+  .progressbar-title {
+    font-size: 4.31vw;
+    line-height: 5.52vw;
+  }
+  .progressbar-value {
+    font-size: 4.31vw;
+    line-height: 5.52vw;
+  }
+  .progressbar-line {
+    height: 2.07vw;
+    border-radius: 1.38vw;
+    margin-bottom: 1.2vw;
+  }
+  .progressbar-complete {
+    border-radius: 1.38vw;
+  }
+  .progressbar-text {
+    font-size: 3.1vw;
+    line-height: 3.8vw;
+  }
 }

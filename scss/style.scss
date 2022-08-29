@@ -231,7 +231,7 @@ label {
 
 // Quiz ===========================
 .quiz {
-    padding: 70px 0 70px;
+    padding: 70px 15px 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -280,8 +280,22 @@ label {
         line-height: 22.05px;
         font-weight: 600;
     }
-    &-footer {        
+    &-footer {
         width: 50%;
+    }
+    @media (max-width:951px) {
+        flex-direction: column-reverse;
+    }
+    @media (max-width:581px) {
+        &-title {
+            font-size: 5.17vw;
+        }
+        &-text {
+            font-size: 5.17vw;
+        }
+        &-wrapper {
+            width: 100%;
+        }
     }
 }
 .form {
@@ -313,6 +327,12 @@ label {
         &:focus {
             border-color: #FFDD2D;
         }
+        &:valid:not(:placeholder-shown) {
+            border: 2px solid rgb(94, 243, 198);
+        }
+        &:invalid:not(:placeholder-shown) {
+            border: 2px solid #aaaaaa;
+        }
     }
     &-select {
         appearance: none;
@@ -322,7 +342,33 @@ label {
 
         font-size: 1.8em;
         line-height: 22.05px;
-
+    }
+    @media (max-width:381px) {
+        &-title {
+            margin-bottom: 3.45vw;
+            font-size: 5vw;
+            line-height: 5.17vw;
+        }
+        &-list {
+            margin-bottom: 5.17vw;
+        }
+        &-li {
+            font-size: 4vw;
+            line-height: 6.9vw;
+        }
+        &-input {
+            margin-bottom: 3.45vw;
+            font-size: 4vw;
+            line-height: 4vw;
+            border-radius: 1vw;
+        }
+        &-select {
+            margin-bottom: 3.45vw;
+            border-radius: 1vw;
+    
+            font-size: 4vw;
+            line-height: 4vw;
+        }
     }
 }
 .select {
@@ -389,12 +435,10 @@ label {
     &-title {
         color: #333;
         font-weight: 500;
-        line-height: 22.05px;
 
         display: flex;
         align-items: center;
         width: 100%;
-        height: 100%;
         padding: 13px 14px;
         border-radius: 6px;
         cursor: pointer;
@@ -402,7 +446,7 @@ label {
         &::after {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 18px;
             right: 20px;
             display: block;
             width: 13px;
@@ -411,6 +455,14 @@ label {
             background: no-repeat url(/src/icons/arrow.svg);
         }
     }
+    @media (max-width:381px) {
+        &-items{
+            top: 43px;
+        }
+    }
+}
+.select-empty {
+    border: 2px #aaaaaa solid;
 }
 .partners {
     display: flex;
@@ -438,13 +490,9 @@ label {
         align-items: center;
         justify-content: space-between;
     }
-    &-contact {
-    }
     &-phone {
         font-weight: 700;
         font-size: 1.2em;
-    }
-    &-text {
     }
     &-address {
         display: flex;
@@ -454,51 +502,155 @@ label {
             display: block;
         }
     }
+    @media (max-width:711px) {
+    padding: 4.2vw 0;
+    font-size: 2.1vw;
+    line-height: 2.5vw;
+        &-phone {
+            font-size: 2.5vw;
+        }
+    }
+    @media (max-width:511px) {
+        font-size: 1.2em;
+        line-height: 1.4em;
+        &-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &-address {
+            text-align: center;
+        }
+        &-contact {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        &-phone {
+            font-size: 1.2em;
+        }
+    }
 }
 // Progressbar ====================
 .progressbar {
     position: sticky;
     justify-self: right;
-    top: 70px;
+    top: 3.65vw;
     right: 0;
-    width: 540px;
+    width: 28.125vw;
     height: fit-content;
     background-color: #F6F7F8;
-    border-radius: 20px;
+    border-radius: 1vw;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 1.5vw;
     display: flex;
     flex-wrap: wrap;
 
     &-title {
-        font-size: 2.5em;
+        font-size: 1.3vw;
         font-weight: 600;
-        line-height: 30.63px;
+        line-height: 1.5vw;
         width: 80%;
         color: #878B92;
         margin-bottom: 10px;
     }
     &-value {
-        font-size: 2.5em;
+        font-size: 1.3vw;
         font-weight: 700;
         line-height: 30.63px;
         margin-left: auto;
     }
     &-line {
         width: 100%;
-        height: 12px;
+        height: 0.625vw;
         background-color: #EAECEE;
-        border-radius: 8px;
-        margin-bottom: 7px;
+        border-radius: 0.4vw;
+        margin-bottom: 0.36vw;
     }
     &-complete {
         height: 100%;
         width: 94%;
-        border-radius: 8px;
+        border-radius: 0.4vw;
         background-color: #FFDD2D;
     }
     &-text {
-        font-size: 1.8em;
-        line-height: 22.05px;
+        font-size: 0.9vw;
+        line-height: 1.15vw;
+    }
+    @media (max-width:1250px) {
+        width: 350px;
+        border-radius: 12px;
+        padding: 1.8em;
+
+        &-title {
+            font-size: 1.6em;
+            line-height: 1.6em;
+        }
+        &-value {
+            font-size: 1.6em;
+        }
+        &-line {
+            height: 8px;
+            border-radius: 5px;
+            margin-bottom: 0.36vw;
+        }
+        &-complete {
+            border-radius: 5px;
+        }
+        &-text {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    @media (max-width:951px) {
+        margin: 0 0 30px auto;
+        width: 534px;
+        border-radius: 20px;
+        padding: 3em;
+
+        &-title {
+            font-size: 2.5em;
+            line-height: 32px;
+        }
+        &-value {
+            font-size: 2.5em;
+        }
+        &-line {
+            height: 12px;
+            border-radius: 8px;
+            margin-bottom: 7px;
+        }
+        &-complete {
+            border-radius: 8px;
+        }
+        &-text {
+            font-size: 1.8em;
+            line-height: 2.2em;
+        }
+    }
+    @media (max-width:581px){
+        width: 100%;
+        margin: 0 0 5.17vw auto;
+        border-radius: 3.45vw;
+        padding: 5.17vw;
+
+        &-title {
+            font-size: 4.31vw;
+            line-height: 5.52vw;
+        }
+        &-value {
+            font-size: 4.31vw;
+            line-height: 5.52vw;
+        }
+        &-line {
+            height: 2.07vw;
+            border-radius: 1.38vw;
+            margin-bottom: 1.2vw;
+        }
+        &-complete {
+            border-radius: 1.38vw;
+        }
+        &-text {
+            font-size: 3.1vw;
+            line-height: 3.8vw;
+        }
     }
 }
