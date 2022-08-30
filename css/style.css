@@ -356,6 +356,9 @@ label {
   }
 }
 
+.form {
+  position: relative;
+}
 .form-title {
   margin-bottom: 20px;
   font-size: 2.5em;
@@ -391,24 +394,6 @@ label {
 .form-input:focus {
   border-color: #FFDD2D;
 }
-.form-input:valid:not(:-moz-placeholder-shown) {
-  border: 2px solid rgb(94, 243, 198);
-}
-.form-input:valid:not(:-ms-input-placeholder) {
-  border: 2px solid rgb(94, 243, 198);
-}
-.form-input:valid:not(:placeholder-shown) {
-  border: 2px solid rgb(94, 243, 198);
-}
-.form-input:invalid:not(:-moz-placeholder-shown) {
-  border: 2px solid #aaaaaa;
-}
-.form-input:invalid:not(:-ms-input-placeholder) {
-  border: 2px solid #aaaaaa;
-}
-.form-input:invalid:not(:placeholder-shown) {
-  border: 2px solid #aaaaaa;
-}
 .form-select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -418,6 +403,22 @@ label {
   border-radius: 6px;
   font-size: 1.8em;
   line-height: 22.05px;
+}
+.form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.3) url(/src/gif/sending.gif) center/40px no-repeat;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+.form.sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 @media (max-width: 381px) {
   .form-title {
@@ -444,6 +445,10 @@ label {
     font-size: 4vw;
     line-height: 4vw;
   }
+}
+
+.error {
+  border: 2px solid #aaa;
 }
 
 .select {

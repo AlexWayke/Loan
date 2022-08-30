@@ -49,10 +49,10 @@
             </section>
             <section class="quiz container">
                 
-                <div class="quiz-wrapper">
+                <form action="#" method="post" id="form" class="quiz-wrapper">
                     <div class="quiz-title">Ответьте на 5 вопросов</div>
                     <div class="quiz-text">и получите решение на одобрение заявки без подтверждения дохода и с любой кредитной историей</div>
-                    <form action="" class="quiz-form form">
+                    <div class="quiz-form form">
                         <div class="form-title">Сумма займа, рублей</div>
                         <ul class="form-list">
                             <li class="form-li">
@@ -75,8 +75,8 @@
                                 <label for="summCh5">10 000 000 - 30 000 000 руб.</label>
                             </li>
                         </ul>
-                    </form>
-                    <form action="" class="quiz-form form">
+                    </div>
+                    <div class="quiz-form form">
                         <div class="form-title">Срок займа, месяцев</div>
                         <ul class="form-list">
                             <li class="form-li">
@@ -92,8 +92,8 @@
                                 <input class="checkbox" type="radio" id="periodCh4" name="period" value="48-60"><label for="periodCh4">От 48 до 60 месяцев</label>
                             </li>
                         </ul>
-                    </form>
-                    <form action="" class="quiz-form form">
+                    </div>
+                    <div class="quiz-form form">
                         <div class="form-title">Вид займа</div>
                         <ul class="form-list">
                             <li class="form-li">
@@ -103,8 +103,8 @@
                                 <input class="checkbox" type="radio" id="typeCh2" name="type" value="investor"><label for="typeCh2">Займ у частного инвестора</label>
                             </li>
                         </ul>
-                    </form>
-                    <form action="" class="quiz-form form">
+                    </div>
+                    <div class="quiz-form form">
                         <div class="form-title">Объект залога</div>
                         <ul class="form-list">
                             <li class="form-li">
@@ -123,8 +123,8 @@
                                 <input class="checkbox" type="radio" id="objectCh5" name="object" value="land"><label for="objectCh5">Земельный участок</label>
                             </li>
                         </ul>
-                    </form>
-                    <form action="" class="quiz-form form">
+                    </div>
+                    <div class="quiz-form form">
                         <div class="form-title">Куда отправить решение о займе?</div>
                         <ul class="form-list">
                             <li class="form-li">
@@ -140,26 +140,26 @@
                                 <input class="checkbox" type="radio" id="contactCh4" name="contact" value="telegram"><label for="contactCh4">Telegram</label>
                             </li>
                         </ul>
-                    </form>
-                    <form action="" class="quiz-form form">
+                    </div>
+                    <div class="quiz-form form">
                         <div class="form-title">Ваши контактные данные</div>
-                        <input class="form-input" required type="text" placeholder="Ваше имя" name="name">
-                        <input class="form-input" required type="tel" placeholder="Номер телефона" name="tel" pattern="^((\+7|7|8)+([0-9]){10})$">
+                        <input class="form-input name req" type="text" placeholder="Ваше имя*" name="name">
+                        <input class="form-input tel req" type="tel" placeholder="Номер телефона*" name="tel">
                         <div class="form-select select" data-state="">
                             <div class="select-title">Ваш город</div>
                             <div class="select-items">
-                                <input class="select-input" id="selectCity01" type="radio" value="Омск" name="selectName">
+                                <input class="select-input" id="selectCity01" type="radio" name="city" value="Омск" name="selectName">
                                 <label class="select-label" for="selectCity01">Омск</label>
-                                <input class="select-input" id="selectCity02" type="radio" value="City 17" name="selectName">
+                                <input class="select-input" id="selectCity02" type="radio" name="city" value="City 17" name="selectName">
                                 <label class="select-label" for="selectCity02">City 17</label>
-                                <input class="select-input" id="selectCity03" type="radio" value="Сайлент хилл" name="selectName">
+                                <input class="select-input" id="selectCity03" type="radio" name="city" value="Сайлент хилл" name="selectName">
                                 <label class="select-label" for="selectCity03">Сайлент хилл</label>
-                                <input class="select-input" id="selectCity04" type="radio" value="Изенгард" name="selectName">
+                                <input class="select-input" id="selectCity04" type="radio" name="city" value="Изенгард" name="selectName">
                                 <label class="select-label" for="selectCity04">Изенгард</label>
                             </div>
                         </div>
-                    </form>
-                    <button class="quiz-btn">Получить одобрение</button>
+                    </div>
+                    <button class="quiz-btn" type="submit" id="button">Получить одобрение</button>
                     <div class="quiz-agree">
                         Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно <a href="">политике конфеденциальности</a>
                     </div>
@@ -170,7 +170,7 @@
                         <img src="/src/logo/logo-partners4.svg" alt="">
                         <img src="/src/logo/logo-partners5.svg" alt="">
                     </div>
-                </div>
+                </form>
                 <div class="progressbar">
                     <div class="progressbar-title">
                         Вы прошли почти весь путь до одобрения
@@ -197,6 +197,7 @@
             </div>
         </footer>
     </div>
+    <script src="/js/send_mail.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

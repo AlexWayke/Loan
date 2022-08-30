@@ -299,6 +299,7 @@ label {
     }
 }
 .form {
+    position: relative;
     &-title {
         margin-bottom: 20px;
         font-size: 2.5em;
@@ -327,12 +328,6 @@ label {
         &:focus {
             border-color: #FFDD2D;
         }
-        &:valid:not(:placeholder-shown) {
-            border: 2px solid rgb(94, 243, 198);
-        }
-        &:invalid:not(:placeholder-shown) {
-            border: 2px solid #aaaaaa;
-        }
     }
     &-select {
         appearance: none;
@@ -342,6 +337,22 @@ label {
 
         font-size: 1.8em;
         line-height: 22.05px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #333, $alpha: 0.3) url(/src/gif/sending.gif) center / 40px no-repeat;
+        z-index: 20;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &.sending::after {
+        opacity: 1;
+        visibility: visible;
     }
     @media (max-width:381px) {
         &-title {
@@ -370,6 +381,9 @@ label {
             line-height: 4vw;
         }
     }
+}
+.error {
+    border: 2px solid #aaa;
 }
 .select {
     display: flex;
