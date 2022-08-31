@@ -10,6 +10,11 @@
     $mail->setLanguage('ru', 'phpmailer/language/');
     $mail->IsHTML(true);
 
+    $mail->Host = "smtp.yandex.ru";
+    $mail->Username = 'yuhcha2';
+    $mail->Password   = 'nhdlxlwrhhzmyrwe';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
     $mail->setFrom('yuhcha2@yandex.ru', 'Отправитель');
     $mail->addAddress('yuhcha2@yandex.ru');
     $mail->Subject = "Заявка формы.";
